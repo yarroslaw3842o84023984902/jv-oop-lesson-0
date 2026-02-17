@@ -21,6 +21,10 @@ public class AuthenticationService {
             return false;
         }
 
+        if (user.getPassword() == null) {
+            return false;
+        }
+
         return user.getPassword().equals(password);
     }
 }
